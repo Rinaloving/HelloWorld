@@ -1,0 +1,25 @@
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\bin\x86\Debug\TestPcStart.exe.config
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.exe
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.pdb
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\bin\x86\Debug\TestPcStart.exe
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\bin\x86\Debug\TestPcStart.pdb
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.Form1.resources
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.Properties.Resources.resources
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.csproj.GenerateResource.Cache
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.csprojResolveAssemblyReference.cache
+E:\MyGit\Hello\TestPcStart\TestPcStart\bin\x86\Debug\TestPcStart.exe.config
+E:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.exe
+E:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.pdb
+E:\MyGit\Hello\TestPcStart\TestPcStart\bin\x86\Debug\TestPcStart.exe
+E:\MyGit\Hello\TestPcStart\TestPcStart\bin\x86\Debug\TestPcStart.pdb
+E:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.Form1.resources
+E:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.Properties.Resources.resources
+E:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.csproj.GenerateResource.Cache
+D:\MyGit\Hello\TestPcStart\TestPcStart\bin\x86\Debug\TestPcStart.exe.config
+D:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.exe
+D:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.pdb
+D:\MyGit\Hello\TestPcStart\TestPcStart\bin\x86\Debug\TestPcStart.exe
+D:\MyGit\Hello\TestPcStart\TestPcStart\bin\x86\Debug\TestPcStart.pdb
+D:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.Form1.resources
+D:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.Properties.Resources.resources
+D:\MyGit\Hello\TestPcStart\TestPcStart\obj\x86\Debug\TestPcStart.csproj.GenerateResource.Cache

@@ -1,0 +1,9 @@
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\bin\Debug\TestPcStart.exe.config
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\bin\Debug\TestPcStart.exe
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\bin\Debug\TestPcStart.pdb
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\Debug\TestPcStart.Form1.resources
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\Debug\TestPcStart.Properties.Resources.resources
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\Debug\TestPcStart.csproj.GenerateResource.Cache
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\Debug\TestPcStart.exe
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\Debug\TestPcStart.pdb
+d:\documents\visual studio 2013\Projects\TestPcStart\TestPcStart\obj\Debug\TestPcStart.csprojResolveAssemblyReference.cache
