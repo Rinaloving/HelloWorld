@@ -1,0 +1,159 @@
+﻿/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP 1000 [CustomerID]
+      ,[CompanyName]
+      ,[ContactName]
+      ,[ContactTitle]
+      ,[Address]
+      ,[City]
+      ,[Region]
+      ,[PostalCode]
+      ,[Country]
+      ,[Phone]
+      ,[Fax]
+  FROM [NORTHWND].[dbo].[Customers]
+  
+  
+
+
+
+exec sp_tables;
+
+
+--创建存储过程
+if (exists (select * from sys.objects where name = 'proc_get_customers'))
+    drop proc proc_get_customers
+go
+create proc proc_get_customers
+as
+    select * from [NORTHWND].[dbo].[Customers];
+
+--调用、执行存储过程
+exec proc_get_customers;
+
+
+--带参存储过程
+if (object_id('proc_find_cus', 'P') is not null)
+    drop proc proc_find_cus
+go
+create proc proc_find_cus(@startId nchar(5), @endId  nchar(5))
+as
+    select * from [NORTHWND].[dbo].[Customers] where CustomerID between @startId and @endId
+go
+
+exec proc_find_cus ALFKI, AROUT;
+
+
+
+--带通配符参数存储过程
+if (object_id('proc_findCustomerByName', 'P') is not null)
+    drop proc proc_findCustomerByName
+go
+create proc proc_findCustomerByName(@name nvarchar(40) = '%j%', @nextName nvarchar(40) = '%')
+as
+    select * from [NORTHWND].[dbo].[Customers] where CompanyName like @name and CompanyName like @nextName;
+go
+
+exec proc_findCustomerByName;
+exec proc_findCustomerByName '%o%', 't%';
+
+--不缓存存储过程
+
+--WITH RECOMPILE 不缓存
+if (object_id('proc_temp', 'P') is not null)
+    drop proc proc_temp
+go
+create proc proc_temp
+with recompile
+as
+    select * from [NORTHWND].[dbo].[Customers];
+go
+
+exec proc_temp;
+
+
+--加密存储过程
+
+--加密WITH ENCRYPTION 
+if (object_id('proc_temp_encryption', 'P') is not null)
+    drop proc proc_temp_encryption
+go
+create proc proc_temp_encryption
+with encryption
+as
+    select * from [NORTHWND].[dbo].[Customers];
+go
+
+exec proc_temp_encryption;
+exec sp_helptext 'proc_temp';
+exec sp_helptext 'proc_temp_encryption';
+
+
+--带游标参数存储过程
+
+if (object_id('proc_cursor', 'P') is not null)
+    drop proc proc_cursor
+go
+create proc proc_cursor
+    @cur cursor varying output
+as
+    set @cur = cursor forward_only static for
+    select CustomerID, CompanyName, City from [NORTHWND].[dbo].[Customers];
+    open @cur;
+go
+--调用
+declare @exec_cur cursor;
+declare @id nchar(5),
+        @name varchar(40),
+        @city varchar(15);
+exec proc_cursor @cur = @exec_cur output;--调用存储过程
+fetch next from @exec_cur into @id, @name, @city;
+while (@@fetch_status = 0)
+begin
+    fetch next from @exec_cur into @id, @name, @city;
+    print 'id: ' + convert(varchar, @id) + ', name: ' + @name + ', city: ' + convert(char, @city);
+end
+close @exec_cur;
+deallocate @exec_cur;--删除游标
+
+-- 分页存储过程
+
+---存储过程、row_number完成分页
+if (object_id('pro_page', 'P') is not null)
+    drop proc proc_cursor
+go
+create proc pro_page
+    @startIndex int,
+    @endIndex int
+as
+    select count(*) from [NORTHWND].[dbo].[Customers]
+;    
+    select * from (
+        select row_number() over(order by CustomerID) as rowId, * from [NORTHWND].[dbo].[Customers] 
+    ) temp
+    where temp.rowId between @startIndex and @endIndex
+go
+--drop proc pro_page
+exec pro_page 1, 4
+--
+--分页存储过程
+if (object_id('pro_page', 'P') is not null)
+    drop proc pro_cus
+go
+create procedure pro_cus(
+    @pageIndex int,
+    @pageSize int
+)
+as
+    declare @startRow int, @endRow int
+    set @startRow = (@pageIndex - 1) * @pageSize +1
+    set @endRow = @startRow + @pageSize -1
+    select * from (
+        select *, row_number() over (order by CustomerID asc) as number from [NORTHWND].[dbo].[Customers] 
+    ) t
+    where t.number between @startRow and @endRow;
+
+exec pro_cus 5, 5;
+
+
+
+

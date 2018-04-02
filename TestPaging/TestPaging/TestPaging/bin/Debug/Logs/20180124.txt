@@ -1,0 +1,15 @@
+
+------------------------
+log:
+------------------------
+Error On : 2018/1/24 17:19:37
+[WriteException]:未将对象引用设置到对象的实例。:
+   在 CYQ.Data.Tool.JsonHelper.x726cb2ff0151fe10(String x732cd90ec747a61c, MDataColumn x26004b30e714cd01)
+   在 CYQ.Data.Tool.JsonHelper.x726cb2ff0151fe10(String x732cd90ec747a61c, MDataColumn x26004b30e714cd01)
+------------------------
+log:
+------------------------
+Error On : 2018/1/24 17:20:29
+[WriteException]:未将对象引用设置到对象的实例。:
+   在 CYQ.Data.Tool.JsonHelper.x726cb2ff0151fe10(String x732cd90ec747a61c, MDataColumn x26004b30e714cd01)
+   在 CYQ.Data.Tool.JsonHelper.x726cb2ff0151fe10(String x732cd90ec747a61c, MDataColumn x26004b30e714cd01)
