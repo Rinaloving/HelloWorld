@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\bin\Debug\GetPicFromPDF.exe.config
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\bin\Debug\GetPicFromPDF.exe
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\bin\Debug\GetPicFromPDF.pdb
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\obj\Debug\GetPicFromPDF.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\obj\Debug\GetPicFromPDF.exe
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\obj\Debug\GetPicFromPDF.pdb
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\bin\Debug\Aspose.Pdf.dll
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\bin\Debug\Spire.License.dll
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\bin\Debug\Spire.Pdf.dll
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\bin\Debug\Microsoft.mshtml.dll
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\bin\Debug\Spire.License.xml
+C:\Users\Administrator\source\repos\GetPicFromPDF\GetPicFromPDF\bin\Debug\Spire.Pdf.xml
