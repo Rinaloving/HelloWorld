@@ -1,0 +1,12 @@
+F:\陈风龙\德州工具20171225\ManagerTool\Test\bin\Debug\Test.exe.config
+F:\陈风龙\德州工具20171225\ManagerTool\Test\bin\Debug\Test.exe
+F:\陈风龙\德州工具20171225\ManagerTool\Test\bin\Debug\Test.pdb
+F:\陈风龙\德州工具20171225\ManagerTool\Test\bin\Debug\Oracle.ManagedDataAccess.dll
+F:\陈风龙\德州工具20171225\ManagerTool\Test\bin\Debug\SmartMap.DataClient.dll
+F:\陈风龙\德州工具20171225\ManagerTool\Test\obj\Debug\Test.Form1.resources
+F:\陈风龙\德州工具20171225\ManagerTool\Test\obj\Debug\Test.Form2.resources
+F:\陈风龙\德州工具20171225\ManagerTool\Test\obj\Debug\Test.Form3.resources
+F:\陈风龙\德州工具20171225\ManagerTool\Test\obj\Debug\ManagerTool.csproj.GenerateResource.Cache
+F:\陈风龙\德州工具20171225\ManagerTool\Test\obj\Debug\Test.exe.licenses
+F:\陈风龙\德州工具20171225\ManagerTool\Test\obj\Debug\Test.exe
+F:\陈风龙\德州工具20171225\ManagerTool\Test\obj\Debug\Test.pdb
