@@ -19,17 +19,16 @@ namespace GetPngFromPDF
 
             string[] pdfs = Directory.GetFiles(path, "*.pdf"); //获取文件夹下的所有pdf文件
 
-
+            string outPath = "C:\\Image\\"; // 图片生成路径
 
             foreach (string page in pdfs)
             {
                 PDFFile pdfFile = PDFFile.Open(page);
-                PDFTranImgHelp.ConvertPDF2Image(page, "C:\\", "NImage", 1, pdfFile.PageCount, ImageFormat.Jpeg, Definition.Five);
-            }     
-                
+                string pdfsName = Path.GetFileNameWithoutExtension(page); //获取pdf文件名（无后缀）
 
-
-           
+                PDFTranImgHelp.ConvertPDF2Image(page, outPath, pdfsName, 1, pdfFile.PageCount, ImageFormat.Jpeg, Definition.Five);
+            }
+            PDFTranImgHelp.ConvertJepgToJpg(outPath);
 
 
         }
@@ -82,6 +81,23 @@ namespace GetPngFromPDF
                 pageImage.Dispose();
             }
             pdfFile.Dispose();
+        }
+
+        /// <summary>
+        /// 将Jpeg图片转化为Jpg格式 add by cfl 2018年4月28日
+        /// </summary>
+        /// <param name="dirPath"></param>
+        public static void ConvertJepgToJpg(string dirPath)
+        {
+            string[] imgDirs = Directory.GetFiles(dirPath);
+
+            foreach (var imgDir in imgDirs)
+            {
+
+                FileInfo file = new FileInfo(imgDir);
+                file.MoveTo(Path.ChangeExtension(imgDir, ".jpg")); // 把jepg 转换成jpg图片
+            }
+
         }
     }
 }
