@@ -76,8 +76,8 @@ namespace FlappyBird
             switch (this.PP)
             {
                 case PipeDirection.Up:
-                    g.DrawImage(GetImage(160,495),this.X, this.Y);
-                    //g.DrawImage(Resources.flappy_pipe1,this.X,this.Y);
+                    g.DrawImage(GetImage(160, 495), this.X, this.Y);
+                    //g.DrawImage(Resources.flappy_pipe3,this.X,this.Y);
                     break;
                 case PipeDirection.Down:
                     g.DrawImage(GetImage(10, 495), this.X, this.Y);
@@ -93,6 +93,14 @@ namespace FlappyBird
         public Rectangle GetRectangle()
         {
             return new Rectangle(this.X, this.Y, this.PPWidth, this.PPHeight);
+        }
+        /// <summary>
+        /// 上面的管道纵坐标应该从0开始计算，碰撞高度减去小鸟的高度
+        /// </summary>
+        /// <returns></returns>
+        public Rectangle GetUpRectangle()
+        {
+            return new Rectangle(this.X, 0, this.PPWidth, this.PPHeight - SingleObject.GetSingle().SingleBird.Height);
         }
 
     }

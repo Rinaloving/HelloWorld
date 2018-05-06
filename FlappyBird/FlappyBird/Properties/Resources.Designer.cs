@@ -123,6 +123,26 @@ namespace FlappyBird.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap flappy_pipe2 {
+            get {
+                object obj = ResourceManager.GetObject("flappy_pipe2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap flappy_pipe3 {
+            get {
+                object obj = ResourceManager.GetObject("flappy_pipe3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap ground {
             get {
                 object obj = ResourceManager.GetObject("ground", resourceCulture);

@@ -15,7 +15,7 @@ namespace FlappyBird
         public Form1()
         {
             InitializeComponent();
-            InitialGame();
+          
         }
 
 
@@ -32,8 +32,19 @@ namespace FlappyBird
             ppDown = new Pipe(100, 400, PipeDirection.Down);
         }
 
+        private static bool b = true;
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            InitialGame();
+            button1.Enabled = false;
+            if (b)
+            {
+                timer3.Stop();
+                timer2.Stop();
+                
+            }
+            
             //给当前背景设置背景图片
 
             //this.BackgroundImage = FlappyBird.Properties.Resources.bg;
@@ -132,7 +143,8 @@ namespace FlappyBird
                     - PPDistance - ppUp.PPHeight;
 
                 //最终还是根据高度计算出y的坐标赋值给管道
-                ppUp.Y = ppUp.PPHeight - 830; // 830 ppUp.Y 不能有负数
+                //ppUp.Y = ppUp.PPHeight - 200 < 0 ? 0 : ppUp.PPHeight - 200; // 830 ppUp.Y 不能有负数
+                ppUp.Y = ppUp.PPHeight - 830;
                 ppDown.Y = ppUp.PPHeight + PPDistance;
 
             }
@@ -157,17 +169,44 @@ namespace FlappyBird
         /// <param name="e"></param>
         private void timer3_tick(object sender, EventArgs e)
         {
-            MovePipe();
 
-            //不停的去判断是否发生了碰撞 SingleObject.GetSingle().SingleBird.GetRectangle().IntersectsWith(ppDown.GetRectangle())||
-            if (SingleObject.GetSingle().SingleBird.GetRectangle().IntersectsWith(ppDown.GetRectangle()))
+           
+            //不停的去判断是否发生了碰撞  SingleObject.GetSingle().SingleBird.GetRectangle().IntersectsWith(ppDown.GetRectangle())
+            //SingleObject.GetSingle().SingleBird.GetRectangle().IntersectsWith(ppUp.GetRectangle());
+            if (SingleObject.GetSingle().SingleBird.GetRectangle().IntersectsWith(ppUp.GetUpRectangle()) || SingleObject.GetSingle().SingleBird.GetRectangle().IntersectsWith(ppDown.GetRectangle()))
             {
+                timer3.Stop();
+                timer2.Stop();
+                //MessageBox.Show("Game Over!!"+ppUp.Y +"<"+ ppUp.X +"<"+ ppUp.PPHeight+"<"+ppUp.PPWidth);
                 MessageBox.Show("Game Over!!");
+                button1.Enabled = true;
+                button2.Enabled = false;
+                timer2.Dispose();
+                timer3.Dispose();
+               
             }
-            if (SingleObject.GetSingle().SingleBird.GetRectangle().IntersectsWith(ppUp.GetRectangle()))
+            else
             {
-                MessageBox.Show("Game Over222!!");
+                button2.Enabled = false;
+                MovePipe();  
             }
+           
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           b = false;
+           new Form1().Show();
+           this.Close();
+          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            b = false;
+            new Form1().Show();
+            this.Hide();
         }
 
 
